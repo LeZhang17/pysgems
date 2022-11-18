@@ -39,11 +39,14 @@ class Sgems:
         self.verbose = verbose
 
         if self.verbose:
+            # Report events that occur during normal operation of a program
+            # Show Info in Python Console
             logger.add(jp(project_wd, f"{project_name}.log"), rotation="100 MB")
             logger.info(f"Project {project_name} initiated")
 
         if check_env:
             # First check if sgems installation files are in the user environment variables
+            # Just find out the SGEMS.exe
             gstl_home = os.environ.get("GSTLAPPLIHOME")
             if not gstl_home:
                 msg = "GSTLAPPLIHOME environment variable does not exist"
@@ -72,6 +75,8 @@ class Sgems:
                 if self.verbose:
                     msg = f"sgems exe file : {exe_name} in {gstl_home}"
                     logger.info(msg)
+
+        # Why end here
 
         # Project name
         self.project_name = project_name

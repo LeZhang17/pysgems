@@ -12,7 +12,7 @@ from pysgems.sgems import sg
 
 def main():
     # %% Initiate sgems pjt
-    cwd = os.getcwd()  # Working directory
+    cwd = os.getcwd()  # Working directory    Return a string representing the current working directory.
     rdir = join_path(cwd, "results", "demo_kriging")  # Results directory
     pjt = sg.Sgems(project_name="sgems_test", project_wd=cwd, res_dir=rdir)
 
